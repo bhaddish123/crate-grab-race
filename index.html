@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Download Crate-Grab Race, a 2–8 player networked multiplayer platformer made in Godot for CSC476 Game Development at West Chester University.">
+  <title>Crate-Grab Race</title>
+  <style>
+    :root {
+      --bg: #130b2b;
+      --bg-2: #1b1430;
+      --panel: rgba(18, 10, 36, 0.86);
+      --purple: #3b1d5a;
+      --line: #9b5de5;
+      --gold: #ffd94d;
+      --gold-dim: #e2bf29;
+      --text: #f6f0ff;
+      --muted: #cbb8e6;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background:
+        radial-gradient(900px 480px at 50% -8%, #3b1d5a 0%, transparent 62%),
+        linear-gradient(180deg, #180d2f 0%, #130b2b 55%, #0e081f 100%);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    main {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 2.25rem 1.25rem 3rem;
+    }
+    .hero {
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(155, 93, 229, 0.45);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+      background: #110a29;
+    }
+    .hero img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    h1 {
+      margin: 1.5rem 0 0.6rem;
+      font-size: clamp(2rem, 5vw, 3rem);
+      letter-spacing: 0.01em;
+      color: var(--gold);
+      text-shadow: 0 0 18px rgba(226, 191, 41, 0.25);
+    }
+    .lede {
+      margin: 0 0 1.75rem;
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 46rem;
+    }
+    .downloads {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.85rem;
+    }
+    .btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.25rem;
+      padding: 1.05rem 1rem 1rem;
+      border-radius: 14px;
+      text-decoration: none;
+      color: #130b2b;
+      background: linear-gradient(180deg, #ffd94d 0%, #e2bf29 100%);
+      font-weight: 750;
+      font-size: 1.15rem;
+      box-shadow: 0 0 0 1px #c9a227, 0 10px 22px rgba(0, 0, 0, 0.28);
+    }
+    .btn:hover, .btn:focus-visible {
+      background: linear-gradient(180deg, #ffe27a 0%, #ffd94d 100%);
+      outline: 2px solid #fff4b8;
+      outline-offset: 3px;
+    }
+    .btn span {
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: #4a3308;
+    }
+    .notes {
+      margin: 1.75rem 0 0;
+      padding: 1.1rem 1.2rem 1.1rem 1.4rem;
+      background: var(--panel);
+      border: 1px solid rgba(155, 93, 229, 0.35);
+      border-left: 4px solid var(--line);
+      border-radius: 12px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .notes li { margin: 0.4rem 0; }
+    .notes code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.88em;
+      color: var(--gold);
+    }
+    @media (max-width: 700px) {
+      .downloads { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="hero">
+      <img src="CrateGrabRace_preview_race.png" width="1280" height="720" alt="Two players at the start of a Crate-Grab Race match, with the climb-progress HUD and a banner that says GO! Grab the golden crate!">
+    </div>
+    <h1>Crate-Grab Race</h1>
+    <p class="lede">A 2–8 player networked multiplayer platformer made in Godot for CSC476 Game Development (West Chester University, Fall 2026). Play over LAN or online via Tailscale.</p>
+    <div class="downloads">
+      <a class="btn" href="https://wcu-cs-cooperlab.github.io/game-dev-f26-demo-games-bhaddish123/crate-grab-race/mac/CrateGrabRace.zip">Mac<span>60.2 MB zip</span></a>
+      <a class="btn" href="https://wcu-cs-cooperlab.github.io/game-dev-f26-demo-games-bhaddish123/crate-grab-race/windows/CrateGrabRace-windows.zip">Windows<span>38.1 MB zip</span></a>
+      <a class="btn" href="https://wcu-cs-cooperlab.github.io/game-dev-f26-demo-games-bhaddish123/crate-grab-race/linux/CrateGrabRace.x86_64">Linux<span>74.0 MB</span></a>
+    </div>
+    <ul class="notes">
+      <li>These are desktop downloads. There is no browser version, because online play uses ENet, which browsers do not support.</li>
+      <li>Mac: if macOS blocks the unsigned build, right-click the app and choose Open.</li>
+      <li>Linux: run <code>chmod +x CrateGrabRace.x86_64</code> before launching.</li>
+    </ul>
+  </main>
+</body>
+</html>
