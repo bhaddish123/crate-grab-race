@@ -41,10 +41,11 @@
       box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
       background: #110a29;
     }
-    .hero img {
+    .hero img, .hero video {
       display: block;
       width: 100%;
       height: auto;
+      background: #110a29;
     }
     h1 {
       margin: 1.5rem 0 0.6rem;
@@ -113,7 +114,9 @@
 <body>
   <main>
     <div class="hero">
-      <img src="CrateGrabRace_preview_race.png" width="1280" height="720" alt="Two players at the start of a Crate-Grab Race match, with the climb-progress HUD and a banner that says GO! Grab the golden crate!">
+      <video autoplay muted loop playsinline poster="CrateGrabRace_preview_race.png" width="1280" height="720" aria-label="Gameplay preview: two players race up the tower in Crate-Grab Race.">
+        <source src="CrateGrabRace_preview.mp4" type="video/mp4">
+      </video>
     </div>
     <h1>Crate-Grab Race</h1>
     <p class="lede">A 2–8 player networked multiplayer platformer made in Godot for CSC476 Game Development (West Chester University, Fall 2026). Play over LAN or online via Tailscale.</p>
